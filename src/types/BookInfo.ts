@@ -1,0 +1,17 @@
+export type BookInfo = {
+   authors: string,
+   desc: string,
+   image: string,
+   isbn10: string,
+   isbn13: string,
+   language: string,
+   pages: string,
+   pdf: string,
+   price: string,
+   publisher: string,
+   rating: string,
+   subtitle: string,
+   title: string,
+   url: string,
+   year: string,
+}

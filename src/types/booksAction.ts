@@ -1,10 +1,13 @@
-import { SET_BOOKS } from "../store/actions/actionConstants";
-import { Ibook } from "./book"
+import { BookInfo } from "./BookInfo";
+import { Ibook } from "./Ibook"
 
-export type setBooksListAction = {
-   // type: typeof SET_BOOKS;
+export type booksAction = {
    type: string;
-   payload?: Ibook[]
+   payload?: Ibook[];
 }
 
-// или тут просто один тип для всех почти всех экшенов книг
+export type fullBookInfoAction = {
+   type: string;
+   payload: BookInfo;
+}
+// ! надо ли под каждый экшен создавать свой тип?

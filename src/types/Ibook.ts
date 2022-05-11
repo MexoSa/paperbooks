@@ -4,4 +4,5 @@ export type Ibook = {
    title: string;
    price: string;
    url: string;
+   subtitle: string;
 }

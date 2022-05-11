@@ -1,5 +1,8 @@
-import { Ibook } from "./book";
+import { BookInfo } from "./BookInfo";
+import { Ibook } from "./Ibook";
 
-export type StateBooks = {
+export type stateBooks = {
    booksList?: Ibook[];
+   isLoading: boolean;
+   bookInfo: BookInfo | null;
 }
