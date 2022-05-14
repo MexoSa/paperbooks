@@ -6,8 +6,9 @@ import { globalState } from '../types/globalState';
 import { clearFullBookInfo } from '../store/actions/booksActions';
 import empty from '../img/empty.png'
 import SimilarBooks from './SimilarBooks';
+import { setBookToCart } from '../store/actions/cartActions';
 
-function BookPage() {
+function BookPage(): React.ReactElement {
    const location = useLocation();
    const id = +location.pathname.split('/')[1];
    const dispatch = useDispatch();
@@ -22,7 +23,7 @@ function BookPage() {
    return (
       <>
          <section className='book-page fg-1 section-margin'>
-            <h1 className='book-page-title'>{bookInfo?.title}</h1>
+            <h1 className='title'>{bookInfo.title}</h1>
             <div className='book-page-main-content'>
                <div className="image-block">
                   <img src={bookInfo.image || empty} alt={bookInfo.image || 'No description'} />
@@ -47,11 +48,11 @@ function BookPage() {
                         <p>{bookInfo.year}</p>
                      </div>
                   </div>
-                  <button className='book-page-button button'>Add to cart</button>
+                  <button className='book-page-button button' onClick={() => dispatch(setBookToCart(bookInfo, 1))}>Add to cart</button>
                </div>
             </div>
             <div className='book-page-description'>
-               <h2 className='book-page-description-title'>Description</h2>
+               <h2 className='title'>Description</h2>
                <p>
                   {bookInfo.desc}
                </p>

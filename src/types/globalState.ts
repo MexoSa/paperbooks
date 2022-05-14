@@ -1,3 +1,4 @@
+import { cartState } from './cartState';
 import { stateBooks } from './stateBooks';
 import { stateFullBookInfo } from './stateFullBookInfo';
 import { stateSearch } from './stateSearch';
@@ -8,4 +9,5 @@ export type globalState = {
    totalPageReducer: stateTotalCount,
    searchBookReducer: stateSearch,
    fullBookInfoReducer: stateFullBookInfo
+   cartReducer: cartState
 }

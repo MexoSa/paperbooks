@@ -7,7 +7,7 @@ type NavBookPageBtnProps = {
 }
 
 
-function NavBookPageBtn({ page, currentPage, click }: NavBookPageBtnProps) {
+function NavBookPageBtn({ page, currentPage, click }: NavBookPageBtnProps): React.ReactElement {
    return (
       <button className={`page-button ${currentPage === page ? 'active' : ''}`} onClick={() => click(currentPage, page)} >
          {

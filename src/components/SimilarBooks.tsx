@@ -26,7 +26,7 @@ function SimilarBooks(): React.ReactElement {
 
    return (
       <section className='similar-books section-margin'>
-         <h2>Similar Books</h2>
+         <h2 className='title'>Similar Books</h2>
          <div className='control-btn'>
             <Arrow img={arrowPrev} changePage={() => changeCount(-1)} />
             <Arrow img={arrowNext} changePage={() => changeCount(1)} />

@@ -8,7 +8,7 @@ import arrowNext from '../img/arrow-next.png';
 import { setCurrentPage } from '../store/actions/totalPageActions';
 import Arrow from './Arrow';
 
-function NavBookPageContainer() {
+function NavBookPageContainer(): React.ReactElement {
    const currentPage: number = useSelector((state: globalState) => state.totalPageReducer.currentPage)
    const totalPages: number = useSelector((state: globalState) => state.totalPageReducer.totalPages)
 
@@ -18,7 +18,6 @@ function NavBookPageContainer() {
    const dispatch = useDispatch();
 
    const changePage = (currentPage: number, page: number) => {
-      console.log(currentPage, page);
       if (currentPage !== page && page <= totalPages && page > 0) {
          dispatch(setCurrentPage(page))
       }

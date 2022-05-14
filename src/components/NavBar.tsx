@@ -28,7 +28,7 @@ function NavBar(): React.ReactElement {
 
    return (
       <header className='header'>
-         <Link className='logo' to='/' onClick={handleClick}>Paper books</Link>
+         <Link className='title' to='/' onClick={handleClick}>Paper books</Link>
          <input className='input' type='text' placeholder='Search IT Books' value={searchValue} onChange={(e) => setSearchValue(e.target.value)} onKeyDown={e => searchBook(e)} />
          <div className='burger-menu'>
             <Link to={'cart'}><img src={cart} alt='cart' /></Link>
