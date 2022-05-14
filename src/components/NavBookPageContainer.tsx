@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import createPage from '../helpers/createPage';
 import { globalState } from '../types/globalState';
 import NavBookPageBtn from './NavBookPageBtn';
-import arrowPrev from '../img/arrow-prev.png';
-import arrowNext from '../img/arrow-next.png';
+import arrowPrev from '../img/arrowPrev.png';
+import arrowNext from '../img/arrowNext.png';
 import { setCurrentPage } from '../store/actions/totalPageActions';
 import Arrow from './Arrow';
 

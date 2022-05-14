@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import CartBookItem from '../components/CartBookItem'
+import GoHome from '../components/GoHome'
 import { CartItem } from '../types/cartState'
 import { globalState } from '../types/globalState'
 
@@ -19,7 +20,7 @@ function Cart() {
             {
                cartList.length > 0
                   ? cartList.map((book: CartItem) => <CartBookItem key={book.item.isbn13} book={book} />)
-                  : <p className='empty-cart'>Your cart is empty</p>
+                  : <GoHome text={'Your cart is empty'} />
             }
          </div>
       </section>

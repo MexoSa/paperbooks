@@ -4,8 +4,8 @@ import { globalState } from '../types/globalState'
 import { Ibook } from '../types/Ibook'
 import Arrow from './Arrow'
 import BookCard from './BookCard'
-import arrowPrev from '../img/arrow-prev.png';
-import arrowNext from '../img/arrow-next.png';
+import arrowPrev from '../img/arrowPrev.png';
+import arrowNext from '../img/arrowNext.png';
 
 function SimilarBooks(): React.ReactElement {
    const bookList: Ibook[] = useSelector((state: globalState) => state.booksReducer.booksList) as Ibook[]

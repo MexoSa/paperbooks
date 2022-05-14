@@ -13,6 +13,7 @@ function App() {
             <Route path='/cart' element={<Cart />} />
             <Route path='/profile' element={<section className='fg-1'>Profile</section>} />
             <Route path='/:id' element={<BookPage />} />
+            <Route path='/*' element={<div>Page not Found</div>} />
          </Route>
       </Routes>
    );
