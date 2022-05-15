@@ -1,21 +1,21 @@
-import React from 'react'
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { getBooks } from '../store/actions/booksActions';
-import { clearSearchValueActions } from '../store/actions/searchBookAction';
+import React, { FC } from 'react'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { clearSearchValueActions } from '../store/actions/searchBookAction'
+import { clearTotalCount } from '../store/actions/totalPageActions'
 
 type GoHomeProps = {
    text: string
 }
 
-function GoHome({ text }: GoHomeProps): React.ReactElement {
+const GoHome: FC<GoHomeProps> = ({ text }) => {
 
-   const navigate = useNavigate();
-   const dispatch = useDispatch();
+   const navigate = useNavigate()
+   const dispatch = useDispatch()
 
    const goHome = () => {
-      dispatch(getBooks());
-      dispatch(clearSearchValueActions());
+      dispatch(clearSearchValueActions())
+      dispatch(clearTotalCount())
       navigate('/')
    }
 

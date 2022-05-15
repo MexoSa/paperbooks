@@ -1,6 +1,6 @@
-import { booksAction } from "../../types/booksAction"
+import BooksAction from "../../types/booksAction"
 import { stateBooks } from "../../types/stateBooks"
-import { SET_BOOKS, TOGLE_LOADING } from "../actions/actionConstants"
+import { ActionConstants } from "../actions/actionConstants"
 
 const initialState: stateBooks = {
    booksList: [],
@@ -8,14 +8,14 @@ const initialState: stateBooks = {
    bookInfo: null,
 }
 
-export const booksReducer = (state: stateBooks = initialState, action: booksAction): stateBooks => {
+export const booksReducer = (state: stateBooks = initialState, action: BooksAction): stateBooks => {
    switch (action.type) {
-      case SET_BOOKS:
+      case ActionConstants.SET_BOOKS:
          return {
             ...state,
             booksList: action.payload,
          }
-      case TOGLE_LOADING:
+      case ActionConstants.TOGLE_LOADING:
          return {
             ...state,
             isLoading: !state.isLoading

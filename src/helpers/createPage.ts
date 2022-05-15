@@ -1,4 +1,6 @@
-export default function createPage(pageArray: number[], currentPage: number, totalPage: number): void {
+type createPageType = (pageArray: number[], currentPage: number, totalPage: number) => void
+
+const createPage:createPageType = (pageArray, currentPage, totalPage) => {
    if (totalPage > 10) {
       if (currentPage > 5) {
          for (let i = currentPage - 4; i <= currentPage + 5; i++) {
@@ -18,3 +20,5 @@ export default function createPage(pageArray: number[], currentPage: number, tot
       }
    }
 }
+
+export default createPage

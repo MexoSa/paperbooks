@@ -1,6 +1,6 @@
-import { fullBookInfoAction } from "../../types/booksAction"
+import BooksAction from "../../types/booksAction"
 import { stateFullBookInfo } from "../../types/stateFullBookInfo"
-import { CLEAR_FULL_BOOK_INFO, SET_FULL_BOOK_INFO } from "../actions/actionConstants"
+import { ActionConstants } from "../actions/actionConstants"
 
 export const initialState: stateFullBookInfo = {
    bookInfo: {
@@ -19,17 +19,17 @@ export const initialState: stateFullBookInfo = {
       title: "",
       url: "",
       year: "",
-   },
+   }
 }
 
-export const fullBookInfoReducer = (state: stateFullBookInfo = initialState, action: fullBookInfoAction): stateFullBookInfo => {
+export const fullBookInfoReducer = (state: stateFullBookInfo = initialState, action: BooksAction): stateFullBookInfo => {
    switch (action.type) {
-      case SET_FULL_BOOK_INFO:
+      case ActionConstants.SET_FULL_BOOK_INFO:
          return {
             ...state,
             bookInfo: action.payload,
          }
-      case CLEAR_FULL_BOOK_INFO:
+      case ActionConstants.CLEAR_FULL_BOOK_INFO:
          return {
             ...state,
             bookInfo: initialState.bookInfo,

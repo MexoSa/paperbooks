@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react'
+import React, { FC, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import CartBookItem from '../components/CartBookItem'
 import GoHome from '../components/GoHome'
 import { CartItem } from '../types/cartState'
 import { globalState } from '../types/globalState'
 
-function Cart() {
+const CartPage: FC = () => {
 
-   const cartList: CartItem[] = useSelector((state: globalState) => state.cartReducer.cartList)
+   const cartList = useSelector((state: globalState) => state.cartReducer.cartList)
 
    useEffect(() => {
       console.log('Cart')
@@ -19,12 +19,12 @@ function Cart() {
          <div className='cart-list'>
             {
                cartList.length > 0
-                  ? cartList.map((book: CartItem) => <CartBookItem key={book.item.isbn13} book={book} />)
-                  : <GoHome text={'Your cart is empty'} />
+                  ? cartList.map((book: CartItem) => <CartBookItem key={book.info.isbn13} book={book} />)
+                  : <GoHome text='Your cart is empty' />
             }
          </div>
       </section>
    )
 }
 
-export default Cart
+export default CartPage

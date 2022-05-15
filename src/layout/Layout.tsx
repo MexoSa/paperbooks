@@ -1,18 +1,10 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux';
-import { Outlet } from 'react-router-dom';
-import Footer from '../components/Footer';
-import NavBar from '../components/NavBar';
-import Subscribe from '../components/Subscribe';
-import { getBooks } from '../store/actions/booksActions';
+import React, { FC } from 'react'
+import { Outlet } from 'react-router-dom'
+import Footer from './Footer'
+import NavBar from './NavBar'
+import Subscribe from '../components/Subscribe'
 
-function Layout(): React.ReactElement {
-   const dispatch = useDispatch();
-
-   useEffect(() => {
-      dispatch(getBooks())
-   }, [dispatch])
-
+const Layout: FC = () => {
    return (
       <>
          <NavBar />

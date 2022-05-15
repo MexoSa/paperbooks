@@ -1,4 +1,4 @@
-import React from "react"
+import React, { FC } from "react"
 import { Ibook } from "../types/Ibook"
 import empty from '../img/empty.png'
 import { useNavigate } from "react-router-dom"
@@ -7,7 +7,7 @@ type BookCardProps = {
    book: Ibook
 }
 
-const BookCard = ({ book }: BookCardProps): React.ReactElement => {
+const BookCard: FC<BookCardProps> = ({ book }) => {
    const navigate = useNavigate()
    const openBookPage = () => {
       navigate(`/${book.isbn13}`)

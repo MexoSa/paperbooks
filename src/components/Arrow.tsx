@@ -3,12 +3,13 @@ import React, { FC } from 'react'
 type ArrowProps = {
    img: string,
    changePage: () => void,
-   text?: string,
+   textBefore?: string,
+   textAfter?: string,
 }
 
-const Arrow: FC<ArrowProps> = ({ img, changePage, text }): React.ReactElement => {
+const Arrow: FC<ArrowProps> = ({ img, changePage, textBefore, textAfter }) => {
    return (
-      <button className='arrow-btn' onClick={changePage}>{text === 'Next' ? text : ''}<img src={img} alt='arrow' />{text === 'Prev' ? text : ''}</button>
+      <button className='arrow-btn' onClick={changePage}>{textBefore}<img src={img} alt='arrow' />{textAfter}</button>
    )
 }
 

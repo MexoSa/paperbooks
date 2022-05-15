@@ -1,50 +1,45 @@
 import { Ibook } from "../../types/Ibook"
-import { booksAction, fullBookInfoAction } from "../../types/booksAction"
-import { CLEAR_FULL_BOOK_INFO, GET_FULL_BOOK_INFO, GET_NEW_BOOKS, SET_BOOKS, SET_FULL_BOOK_INFO, TOGLE_LOADING } from "./actionConstants"
+import BooksAction from "../../types/booksAction"
+import { ActionConstants } from "./actionConstants"
 import { BookInfo } from "../../types/BookInfo"
 import { initialState } from "../reducers/fullBookInfoReducer"
 
-const getBooks = (): booksAction => {
+const getBooks = (): BooksAction => {
    return {
-      type: GET_NEW_BOOKS,
+      type: ActionConstants.GET_NEW_BOOKS,
    }
 }
 
-const setBooksList = (newsList: Ibook[]): booksAction => {
+const setBooksList = (newsList: Ibook[]): BooksAction => {
    return {
-      type: SET_BOOKS,
+      type: ActionConstants.SET_BOOKS,
       payload: newsList
    }
 }
 
-const togleLoading = (): booksAction => {
+const togleLoading = (): BooksAction => {
    return {
-      type: TOGLE_LOADING
+      type: ActionConstants.TOGLE_LOADING
    }
 }
 
-type getFullBookInfoAction = {
-   type: string;
-   payload: number;
-}
-
-const getFullBookInfo = (id: number): getFullBookInfoAction => {
+const getFullBookInfo = (id: number): BooksAction => {
    return {
-      type: GET_FULL_BOOK_INFO,
+      type: ActionConstants.GET_FULL_BOOK_INFO,
       payload: id
    }
 }
 
-const setBookInfo = (bookInfo: BookInfo): fullBookInfoAction => {
+const setBookInfo = (bookInfo: BookInfo): BooksAction => {
    return {
-      type: SET_FULL_BOOK_INFO,
+      type: ActionConstants.SET_FULL_BOOK_INFO,
       payload: bookInfo
    }
 }
 
-const clearFullBookInfo = (): fullBookInfoAction => {
+const clearFullBookInfo = (): BooksAction => {
    return {
-      type: CLEAR_FULL_BOOK_INFO,
+      type: ActionConstants.CLEAR_FULL_BOOK_INFO,
       payload: initialState.bookInfo
    }
 }

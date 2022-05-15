@@ -1,5 +1,5 @@
-import { BookInfo } from "./BookInfo";
+import { BookInfo } from "./BookInfo"
 
 export type stateFullBookInfo = {
    bookInfo: BookInfo
-};
+}

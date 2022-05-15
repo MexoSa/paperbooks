@@ -1,7 +1,7 @@
-import { Ibook } from "./Ibook";
+import { Ibook } from "./Ibook"
 
 export type Iresponse = {
-   books: Ibook[];
-   total: string;
-   error: string;
+   books: Ibook[]
+   total: string
+   error: string
 }

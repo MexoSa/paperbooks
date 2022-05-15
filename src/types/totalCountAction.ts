@@ -1,4 +1,4 @@
 export type totalCountAction = {
-   type: string;
-   payload: number;
+   type: string
+   payload: number
 }

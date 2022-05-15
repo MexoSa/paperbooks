@@ -1,17 +1,17 @@
 import { BookInfo } from "../../types/BookInfo"
 import { DeleteCartAction, SetCartAction } from "../../types/cartAction"
-import { SET_BOOK_TO_CART, DELETE_BOOK_CART } from "./actionConstants"
+import { ActionConstants } from "./actionConstants"
 
-const setBookToCart = (book: BookInfo, count: number): SetCartAction => {
+const setBookToCart = (info: BookInfo, count: number): SetCartAction => {
    return {
-      type: SET_BOOK_TO_CART,
-      payload: { item: book, quantity: count }
+      type: ActionConstants.SET_BOOK_TO_CART,
+      payload: { info: info, quantity: count }
    }
 }
 
 const deleteBookCart = (isbn13: string): DeleteCartAction => {
    return {
-      type: DELETE_BOOK_CART,
+      type: ActionConstants.DELETE_BOOK_CART,
       payload: isbn13
    }
 }

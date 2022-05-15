@@ -1,13 +1,12 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-type NavBookPageBtnProps = {
+type PaginationBtnProps = {
    page: number,
    currentPage: number,
    click: (currentPage: number, page: number) => void,
 }
 
-
-function NavBookPageBtn({ page, currentPage, click }: NavBookPageBtnProps): React.ReactElement {
+const PaginationBtn: FC<PaginationBtnProps> = ({ page, currentPage, click }) => {
    return (
       <button className={`page-button ${currentPage === page ? 'active' : ''}`} onClick={() => click(currentPage, page)} >
          {
@@ -17,4 +16,4 @@ function NavBookPageBtn({ page, currentPage, click }: NavBookPageBtnProps): Reac
    )
 }
 
-export default NavBookPageBtn
+export default PaginationBtn

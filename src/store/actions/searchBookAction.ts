@@ -1,16 +1,15 @@
-import { IsearchBookActions } from "../../types/IsearchAction"
-import { ClearSearchValueActions } from "../../types/searchBookAction"
-import { CLEAR_SEARCH_VALUE, SEARCH } from "./actionConstants"
+import SearchBookAction from '../../types/searchBookAction'
+import { ActionConstants } from "./actionConstants"
 
-export const searchBookActions = (searchValue: string): IsearchBookActions => {
+export const searchBookActions = (searchValue: string): SearchBookAction => {
    return {
-      type: SEARCH,
+      type: ActionConstants.SEARCH,
       payload: searchValue
    }
 }
 
-export const clearSearchValueActions = (): ClearSearchValueActions => {
+export const clearSearchValueActions = (): SearchBookAction => {
    return {
-      type: CLEAR_SEARCH_VALUE,
+      type: ActionConstants.CLEAR_SEARCH_VALUE,
    }
 }

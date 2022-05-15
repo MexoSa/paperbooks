@@ -1,10 +1,10 @@
-import { BookInfo } from "./BookInfo";
+import { BookInfo } from "./BookInfo"
 
 export type CartItem = {
-   item: BookInfo;
-   quantity: number;
+   info: BookInfo
+   quantity: number
 }
 
 export type cartState = {
-   cartList: CartItem[];
+   cartList: CartItem[]
 }
