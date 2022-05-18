@@ -1,0 +1,18 @@
+.subscribe {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   width: 100%;
+   padding: 56px 64px;
+   background-color: #F4EEFD;
+   .subtitle {
+      color: $gray;
+   }
+   form {
+      display: flex;
+      .input {
+         flex-grow: 1;
+         padding: 16px 24px;
+      }
+   }
+}

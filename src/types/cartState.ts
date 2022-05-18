@@ -7,4 +7,5 @@ export type CartItem = {
 
 export type cartState = {
    cartList: CartItem[]
+   isModalOpen: boolean
 }

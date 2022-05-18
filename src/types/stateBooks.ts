@@ -5,4 +5,5 @@ export type stateBooks = {
    booksList: Ibook[]
    isLoading: boolean
    bookInfo: BookInfo | null
+   error: boolean
 }

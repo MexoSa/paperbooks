@@ -1,0 +1,38 @@
+.book-page {
+   .title {
+      margin-bottom: 30px;
+   }
+   .book-price {
+      font-size: 30px;
+      font-weight: bold;
+   }
+   .book-page-main-content {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+   }
+   .book-page-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 20px;
+      width: 400px;
+      border-top: 1px solid $gray;
+      .center {
+         font-weight: bold;
+         font-size: 1.5em;
+      }
+      .book-page-button {
+         width: 100%;
+      }
+   }
+   .book-page-description {
+      .title {
+         padding: 10px 0;
+      }
+      p {
+         font-size: 18px;
+         line-height: 1.3em;
+      }
+   }
+}

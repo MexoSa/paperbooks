@@ -11,8 +11,8 @@ export type GetNewBooksAction = {
    type: ActionConstants.GET_NEW_BOOKS
 }
 
-export type TogleLoadingAction = {
-   type: ActionConstants.TOGLE_LOADING
+export type ToggleLoadingAction = {
+   type: ActionConstants.TOGGLE_LOADING
 }
 
 export type GetFullBookInfoAction = {
@@ -30,11 +30,21 @@ export type ClearFullBookInfoAction = {
    payload: BookInfo
 }
 
-type BooksAction = SetBooksListAction |
-   GetNewBooksAction |
-   TogleLoadingAction |
-   GetFullBookInfoAction |
-   SetBookInfoAction |
-   ClearFullBookInfoAction
+export type SetErrorAction = {
+   type: ActionConstants.SET_ERROR
+}
+
+export type ClearErrorAction = {
+   type: ActionConstants.CLEAR_ERROR
+}
+
+type BooksAction = SetBooksListAction
+   | GetNewBooksAction
+   | ToggleLoadingAction
+   | GetFullBookInfoAction
+   | SetBookInfoAction
+   | ClearFullBookInfoAction
+   | SetErrorAction
+   | ClearErrorAction
 
 export default BooksAction

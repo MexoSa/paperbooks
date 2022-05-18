@@ -4,6 +4,7 @@ import { ActionConstants } from "../actions/actionConstants"
 
 const initialState: cartState = {
    cartList: [],
+   isModalOpen: false,
 }
 
 export const cartReducer = (state: cartState = initialState, action: CartAction): cartState => {

@@ -1,0 +1,19 @@
+.similar-books {
+   position: relative;
+   & h2 {
+      margin-bottom: 40px;
+      text-transform: uppercase;
+   }
+   .similar-book-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+   }
+   .control-btn {
+      display: flex;
+      gap: 20px;
+      position: absolute;
+      top: 0;
+      right: 0;
+   }
+}

@@ -1,6 +1,7 @@
-import React, { FC, useEffect } from 'react'
+import React, { FC } from 'react'
 import { useSelector } from 'react-redux'
 import CartBookItem from '../components/CartBookItem'
+import CartTotal from '../components/CartTotal'
 import GoHome from '../components/GoHome'
 import { CartItem } from '../types/cartState'
 import { globalState } from '../types/globalState'
@@ -9,12 +10,8 @@ const CartPage: FC = () => {
 
    const cartList = useSelector((state: globalState) => state.cartReducer.cartList)
 
-   useEffect(() => {
-      console.log('Cart')
-   }, [])
-
    return (
-      <section className='fg-1 section-margin cart'>
+      <div className='fg-1 section-margin cart'>
          <h1 className='title'>your cart</h1>
          <div className='cart-list'>
             {
@@ -23,7 +20,10 @@ const CartPage: FC = () => {
                   : <GoHome text='Your cart is empty' />
             }
          </div>
-      </section>
+         {
+            cartList.length > 0 && <CartTotal cartList={cartList} />
+         }
+      </div>
    )
 }
 

@@ -1,0 +1,15 @@
+.book-card {
+   position: relative;
+   width: 350px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap:10px;
+   .title {
+      font-size: 1em;
+   }
+   cursor: pointer;
+   .book-isbn13 {
+      color: $gray;
+   }
+}

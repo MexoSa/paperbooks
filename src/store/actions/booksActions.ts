@@ -2,7 +2,7 @@ import { Ibook } from "../../types/Ibook"
 import BooksAction from "../../types/booksAction"
 import { ActionConstants } from "./actionConstants"
 import { BookInfo } from "../../types/BookInfo"
-import { initialState } from "../reducers/fullBookInfoReducer"
+// import { initialState } from "../reducers/fullBookInfoReducer"
 
 const getBooks = (): BooksAction => {
    return {
@@ -17,9 +17,9 @@ const setBooksList = (newsList: Ibook[]): BooksAction => {
    }
 }
 
-const togleLoading = (): BooksAction => {
+const toggleLoading = (): BooksAction => {
    return {
-      type: ActionConstants.TOGLE_LOADING
+      type: ActionConstants.TOGGLE_LOADING
    }
 }
 
@@ -37,18 +37,32 @@ const setBookInfo = (bookInfo: BookInfo): BooksAction => {
    }
 }
 
-const clearFullBookInfo = (): BooksAction => {
+const setError = (): BooksAction => {
    return {
-      type: ActionConstants.CLEAR_FULL_BOOK_INFO,
-      payload: initialState.bookInfo
+      type: ActionConstants.SET_ERROR,
    }
 }
+
+const clearError = (): BooksAction => {
+   return {
+      type: ActionConstants.CLEAR_ERROR,
+   }
+}
+
+// const clearFullBookInfo = (): BooksAction => {
+//    return {
+//       type: ActionConstants.CLEAR_FULL_BOOK_INFO,
+//       payload: initialState.bookInfo
+//    }
+// }
 
 export {
    setBooksList,
    getBooks,
-   togleLoading,
+   toggleLoading,
    getFullBookInfo,
    setBookInfo,
-   clearFullBookInfo
+   setError,
+   clearError,
+   // clearFullBookInfo
 }

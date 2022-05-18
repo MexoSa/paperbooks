@@ -11,4 +11,5 @@ export type DeleteCartAction = {
    payload: string
 }
 
-export type CartAction = SetCartAction | DeleteCartAction
+export type CartAction = SetCartAction
+   | DeleteCartAction

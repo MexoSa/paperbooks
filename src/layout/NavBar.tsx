@@ -37,7 +37,7 @@ const NavBar: FC = () => {
       <div className='header'>
          <Link className='title' to='/' onClick={goHome}>Paper books</Link>
          <form className='header-form' onSubmit={e => searchBook(e)}>
-            <input className='input' type='text' placeholder='Search IT Books' value={searchValue} onChange={e => changeSearchValue(e)} />
+            <input className='input' required type='text' placeholder='Search IT Books' value={searchValue} onChange={e => changeSearchValue(e)} />
             <button className='form-button' type="submit"><img src={search} alt="search-icon" /></button>
          </form>
          <div className='burger-menu'>

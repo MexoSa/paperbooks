@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 import Footer from './Footer'
 import NavBar from './NavBar'
 import Subscribe from '../components/Subscribe'
+import ToTopBtn from '../components/ToTopBtn'
 
 const Layout: FC = () => {
    return (
@@ -10,6 +11,7 @@ const Layout: FC = () => {
          <NavBar />
          <Outlet />
          <Subscribe />
+         <ToTopBtn />
          <Footer />
       </>
    )

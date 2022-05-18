@@ -1,0 +1,22 @@
+.new-books-container {
+   width: 100%;
+   min-height: 200px;
+   h1 {
+      margin-bottom: 30px;
+   }
+   .new-books-list{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 25px;
+   }
+   .search-value {
+      font-weight: normal;
+      text-transform: none;
+   }
+}
+
