@@ -15,12 +15,12 @@ const HomePage: FC = () => {
    }, [dispatch])
 
    return (
-      < div className='new-books-container fg-1 section-margin' >
+      < div className='books-container fg-1 section-margin' >
          <h1 className='title'>New Releases Books</h1>
          {
             isLoading
                ? <Loader />
-               : <div className='new-books-list'>{booksList?.map(book => <BookCard book={book} key={book.isbn13} />)}</div>
+               : <div className='books-list'>{booksList?.map(book => <BookCard book={book} key={book.isbn13} />)}</div>
          }
       </div >
    )

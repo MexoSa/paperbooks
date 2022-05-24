@@ -23,13 +23,13 @@ const SearchPage: FC = () => {
 
    return (
       <>
-         < div className='new-books-container fg-1 section-margin' >
+         < div className='books-container fg-1 section-margin' >
             <h1 className='title'>Search results for: <span className='search-value grey'>{decodeURI(searchValue)}</span></h1>
             {booksList.length === 0 && !isLoading && <GoHome text="Not Found" />}
             {
                isLoading
                   ? <Loader />
-                  : <div className='new-books-list'>{booksList.map(book => <BookCard book={book} key={book.isbn13} />)}</div>
+                  : <div className='books-list'>{booksList.map(book => <BookCard book={book} key={book.isbn13} />)}</div>
             }
          </div >
          {totalPages !== 0 && <PaginationContainer />}

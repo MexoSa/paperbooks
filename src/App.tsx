@@ -10,7 +10,7 @@ function App() {
    return (
       <Routes>
          <Route path='/' element={<Layout />} >
-            <Route path='/' element={<HomePage />} />
+            <Route index element={<HomePage />} />
             <Route path='/search/:searchValue' element={<SearchPage />} />
             <Route path='/cart' element={<CartPage />} />
             <Route path='/profile' element={<section className='fg-1'>Profile</section>} />
