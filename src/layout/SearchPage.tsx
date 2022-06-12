@@ -32,7 +32,7 @@ const SearchPage: FC = () => {
                   : <div className='books-list'>{booksList.map(book => <BookCard book={book} key={book.isbn13} />)}</div>
             }
          </div >
-         {totalPages !== 0 && <PaginationContainer />}
+         {totalPages > 1 && <PaginationContainer />}
       </>
    )
 }

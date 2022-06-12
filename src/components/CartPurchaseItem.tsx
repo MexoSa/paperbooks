@@ -4,11 +4,11 @@ import empty from '../img/empty.png'
 import { deleteBookCart, setBookToCart } from '../store/actions/cartActions'
 import { useDispatch } from 'react-redux'
 
-type CartBookItemProps = {
+type CartItemProps = {
    book: CartItem
 }
 
-const CartBookItem: FC<CartBookItemProps> = ({ book: { info, quantity } }) => {
+const CartPurchaseItem: FC<CartItemProps> = ({ book: { info, quantity } }) => {
    const dispatch = useDispatch()
    return (
       <div className="cart-item">
@@ -34,4 +34,4 @@ const CartBookItem: FC<CartBookItemProps> = ({ book: { info, quantity } }) => {
    )
 }
 
-export default CartBookItem
+export default CartPurchaseItem

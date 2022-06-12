@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { useSelector } from 'react-redux'
-import CartBookItem from '../components/CartBookItem'
+import CartBookItem from '../components/CartPurchaseItem'
 import CartTotal from '../components/CartTotal'
 import GoHome from '../components/GoHome'
 import { CartItem } from '../types/cartState'

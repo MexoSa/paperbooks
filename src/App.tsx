@@ -13,7 +13,6 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path='/search/:searchValue' element={<SearchPage />} />
             <Route path='/cart' element={<CartPage />} />
-            <Route path='/profile' element={<section className='fg-1'>Profile</section>} />
             <Route path='/:id' element={<BookPage />} />
          </Route>
       </Routes>

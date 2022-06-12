@@ -25,6 +25,37 @@
          cursor: pointer;
          right: 0;
       }
+      .search-tips {
+         position: absolute;
+         margin-top:10px;
+         border: 1px solid $gray;
+         width: 100%;
+         z-index: 1;
+         max-height: 500px;
+         overflow-y: auto;
+         background-color: white;
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         padding: 10px;
+         .tip {
+            padding: 10px;
+            height: 80px;
+            justify-content:start;
+            gap: 10px;
+            .image-block {
+               width: 70px;
+               min-width: 70px;
+               height: 70px;
+            }
+            &:hover {
+               background-color: $gray;
+            }
+            p {
+               font-size: 18px;
+            }
+         }
+      }
    }
    .burger-menu {
       display: flex;
