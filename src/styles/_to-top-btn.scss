@@ -1,19 +1,52 @@
 .to-top-btn {
    position: fixed;
-   bottom: 50px;
-   left: 50px;
-   width: 50px;
-   height: 50px;
-   padding: 0px;
-   border-radius: 50%;
-   background-color: rgb(61, 54, 54);
    display: flex;
    justify-content: center;
    align-items: center;
+   bottom: 60px;
+   left: 40px;
+   width: 60px;
+   height: 60px;
+   padding: 0px;
+   border-radius: 50%;
    cursor: pointer;
    border: none;
    color: white;
    font-size: 26px;
+   background-color: $orange;
+	transition: 200ms;
+   & svg {
+         fill: white;
+         width: 25px;
+         height: 25px;
+   }
+   &:before {
+      content: 'Back to Top';
+      position: absolute;
+      transform:  translateY(50px);
+      font-size: 12px;
+      transition: 200ms;
+      color: transparent;
+      font-weight: bold;
+   }
+   &:hover {
+      transform: scale(1.1);
+      & svg {
+         animation: bounce 2s infinite linear;
+      }
+   }
+   &:hover::before {
+      color: rgb(0, 0, 0);
+   }
+
+}
+
+@keyframes bounce {
+0% {transform:translateY(-10%)}
+25% {transform:translateY(-35%)}
+50% {transform:translateY(0)}
+75% {transform:translateY(-5%)}
+100% {transform:translateY(-10%)}
 }
 
 @media screen and (max-width: 1350px) {

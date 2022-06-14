@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+}
+
+body {
+   font-family: 'Mukta', sans-serif;
+   background-color:#e5ca1736;
 }
 
 #root {
@@ -33,10 +39,12 @@
 
 .input {
    width: 500px;
-   border: 1px solid $gray;
+   border: none;
    padding: 12px 40px 12px 20px;
    outline: none;
    line-height: 24px;
+   font-family: inherit;
+   border-radius: $border-radius;
 }
 
 .flex {

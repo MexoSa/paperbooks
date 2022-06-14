@@ -3,8 +3,8 @@ import React, { FC } from 'react'
 const Footer: FC = () => {
    return (
       <div className='footer'>
-         <p>©2022 Bookstore</p>
          <p>All rights reserved</p>
+         <p>©2022 Paper Books</p>
       </div>
    )
 }

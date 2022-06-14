@@ -11,13 +11,13 @@
    text-transform: uppercase;
    font-weight: bold;
    border: none;
+   border-radius: $border-radius;
    outline: none;
-   box-shadow: 2px 2px 5px rgb(57, 57, 57);
    &:hover {
-      background-color: rgb(0, 0, 176);
-      color: white;
+      background-color:$orange;
+      color: rgb(255, 255, 255);
    }
    &:active {
-      box-shadow: inset 3px 3px 5px rgb(55, 55, 254), inset -4px -4px 5px rgb(55, 55, 254);
+      box-shadow: inset 0px 0px 10px 5px rgba(223, 178, 130, 0.382);
    }
 }
