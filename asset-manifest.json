@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.56b5dfe9.css",
-    "main.js": "/static/js/main.8593fd72.js",
-    "static/media/search.svg": "/static/media/search.42d1889a4ff111006a825134fd645b8f.svg",
-    "index.html": "/index.html",
-    "main.56b5dfe9.css.map": "/static/css/main.56b5dfe9.css.map",
-    "main.8593fd72.js.map": "/static/js/main.8593fd72.js.map"
+    "main.css": "/Paper-books/static/css/main.56b5dfe9.css",
+    "main.js": "/Paper-books/static/js/main.8fe9f95b.js",
+    "static/media/search.svg": "/Paper-books/static/media/search.42d1889a4ff111006a825134fd645b8f.svg",
+    "index.html": "/Paper-books/index.html",
+    "main.56b5dfe9.css.map": "/Paper-books/static/css/main.56b5dfe9.css.map",
+    "main.8fe9f95b.js.map": "/Paper-books/static/js/main.8fe9f95b.js.map"
   },
   "entrypoints": [
     "static/css/main.56b5dfe9.css",
-    "static/js/main.8593fd72.js"
+    "static/js/main.8fe9f95b.js"
   ]
 }
