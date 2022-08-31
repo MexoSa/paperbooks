@@ -9,25 +9,25 @@ import cartWithProducts from '../img/cartWithProducts.png'
 import SearchForm from '../components/SearchForm'
 
 const NavBar: FC = () => {
-   const dispatch = useDispatch()
-   const navigate = useNavigate()
-   const cartList = useSelector((state: globalState) => state.cartReducer.cartList)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const cartList = useSelector((state: globalState) => state.cartReducer.cartList)
 
-   const goHome = () => {
-      dispatch(clearSearchValueActions())
-      dispatch(clearTotalCount())
-      navigate('/')
-   }
+  const goHome = () => {
+    dispatch(clearSearchValueActions())
+    dispatch(clearTotalCount())
+    // navigate('paperbooks/')
+  }
 
-   return (
-      <div className='header'>
-         <Link className='title' to='/' onClick={goHome}>Paper books</Link>
-         <SearchForm />
-         <div className='burger-menu'>
-            <Link to='cart'><img src={cartList.length > 0 ? cartWithProducts : emptyCart} alt='cart' /></Link>
-         </div>
+  return (
+    <div className='header'>
+      <Link className='title' to='/paperbooks' onClick={goHome}>Paper books</Link>
+      <SearchForm />
+      <div className='burger-menu'>
+        <Link to='/paperbooks/cart'><img src={cartList.length > 0 ? cartWithProducts : emptyCart} alt='cart' /></Link>
       </div>
-   )
+    </div>
+  )
 }
 
 export default NavBar

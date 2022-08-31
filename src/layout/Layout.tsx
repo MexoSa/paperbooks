@@ -6,15 +6,15 @@ import Subscribe from '../components/Subscribe'
 import ToTopBtn from '../components/ToTopBtn'
 
 const Layout: FC = () => {
-   return (
-      <>
-         <NavBar />
-         <Outlet />
-         <Subscribe />
-         <ToTopBtn />
-         <Footer />
-      </>
-   )
+  return (
+    <>
+      <NavBar />
+      <Outlet />
+      <Subscribe />
+      <ToTopBtn />
+      <Footer />
+    </>
+  )
 }
 
 export default Layout

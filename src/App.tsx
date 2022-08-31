@@ -7,16 +7,16 @@ import Layout from './layout/Layout'
 import SearchPage from './layout/SearchPage'
 
 function App() {
-   return (
-      <Routes>
-         <Route path='/' element={<Layout />} >
-            <Route index element={<HomePage />} />
-            <Route path='/search/:searchValue' element={<SearchPage />} />
-            <Route path='/cart' element={<CartPage />} />
-            <Route path='/:id' element={<BookPage />} />
-         </Route>
-      </Routes>
-   )
+  return (
+    <Routes>
+      <Route path='/paperbooks/' element={<Layout />} >
+        <Route index element={<HomePage />} />
+        <Route path='/paperbooks/search/:searchValue' element={<SearchPage />} />
+        <Route path='/paperbooks/cart' element={<CartPage />} />
+        <Route path='/paperbooks/:id' element={<BookPage />} />
+      </Route>
+    </Routes>
+  )
 }
 
 export default App
