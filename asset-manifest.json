@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/paperbooks/static/css/main.56b5dfe9.css",
-    "main.js": "/paperbooks/static/js/main.4767f8fc.js",
+    "main.js": "/paperbooks/static/js/main.e6adb660.js",
     "static/media/search.svg": "/paperbooks/static/media/search.42d1889a4ff111006a825134fd645b8f.svg",
     "index.html": "/paperbooks/index.html",
     "main.56b5dfe9.css.map": "/paperbooks/static/css/main.56b5dfe9.css.map",
-    "main.4767f8fc.js.map": "/paperbooks/static/js/main.4767f8fc.js.map"
+    "main.e6adb660.js.map": "/paperbooks/static/js/main.e6adb660.js.map"
   },
   "entrypoints": [
     "static/css/main.56b5dfe9.css",
-    "static/js/main.4767f8fc.js"
+    "static/js/main.e6adb660.js"
   ]
 }
